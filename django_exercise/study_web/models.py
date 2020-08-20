@@ -1,17 +1,13 @@
+#from django.db import models
+#from django.utils import timezone
+
+from __future__ import unicode_literals
 from django.db import models
-from django.utils import timezone
 
-class Post(models.Model):
-    author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-    title = models.CharField(max_length=100)
-    content = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    published_at = models.DateTimeField(blank = True, null = True)
-
-    def publish(self):
-        self.published_at = timezone.now()
-        self.save()
-
-    def __str__(self):
-        return self.title
+class DjangoBoard(models.Model):#게시판 디비
+    title = models.CharField(max_length=50, blank = True)#제목
+    contents = models.CharField(max_length=200, blank = True)#내용
+    nickName = models.CharField(max_length=50, blank = True)#닉네임
+    date = models.DateField(null=True, blank=True) #글을 쓴 날짜 
+    hits = models.IntegerField(null=True, blank = True)#조회수
+    
