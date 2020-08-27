@@ -44,16 +44,16 @@
       {% for Board in boardList %}  <!-- #BoardList속에 있는 각 요소에 대하여-->
       <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
         <p>
-          <span class="badge badge-secondary">모집중</span>
-          <span class="badge badge-primary">웹</span>
-          <span class="badge badge-success">서울</span>
+          <span class="badge badge-secondary">{{Board.state}}</span>
+          <span class="badge badge-primary">{{Board.location}}</span>
+          <span class="badge badge-success">{{Board.kindOfStudy}}</span>
         </p>
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1">{{Board.title}}</h5>
-          <small class="text-muted">3 days ago</small>
+          <small class="text-muted">{{Board.date}}</small>
         </div>
         <p class="mb-1"></p>
-        <small class="text-muted">조회수: 200</small>
+        <small class="text-muted">{{Board.hits}}</small>
       </a>
       {% endfor %}
     </div>
