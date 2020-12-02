@@ -10,7 +10,7 @@
 - Visual Studio Code
 - SqLite3
 
-## 명세서
+## 명세서  
 <img src="images/1.png">
 
 ## 프로젝트 기능
