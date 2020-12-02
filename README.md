@@ -14,13 +14,13 @@
 <img src="images/1.png">
 
 ## 프로젝트 기능
-1. 로그인화면  
+> 1. 로그인화면  
 <img src="images/3.png">
 
-2. 스터디 모집 게시판   
+> 2. 스터디 모집 게시판   
 - DB에 저장된 글 정보를 가져와 출력합니다.  
 <img src="images/2.png">
 
-3. 글쓰기 화면
+> 3. 글쓰기 화면
 - 글의 내용이 sqlite3 DB에 저장될 수 있도록 합니다.  
 <img src="images/4.png">
